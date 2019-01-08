@@ -15,41 +15,53 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnTextView;
     private Button mBtnButton;
     private Button mBtnEditText;
+    private Button mBtnRadionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mBtnTextView = findViewById(R.id.btn_textview);
-        mBtnTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Jump to Text
-                Intent intent = new Intent(MainActivity.this,TextViewActivity.class);
-                startActivity(intent);
-            }
-        });
-
         mBtnButton = findViewById(R.id.btn_button);
-        mBtnButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Jump to Button display
-                Intent intent = new Intent(MainActivity.this,ButtonActivity.class);
-                startActivity(intent);
-
-            }
-        });
-
         mBtnEditText = findViewById(R.id.btn_editText);
-        mBtnEditText.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                //Jump to EditText display
-                Intent intent = new Intent(MainActivity.this,EditTextActivity.class);
-                startActivity(intent);
+        mBtnRadionButton = findViewById(R.id.btn_radioButton);
+        setListeners();
+    }
+
+    public void setListeners(){
+        Onclick onclick = new Onclick();
+        mBtnEditText.setOnClickListener(onclick);
+        mBtnTextView.setOnClickListener(onclick);
+        mBtnButton.setOnClickListener(onclick);
+        mBtnRadionButton.setOnClickListener(onclick);
+    }
+
+    private class Onclick implements View.OnClickListener {
+
+        @Override
+        public void onClick(View v) {
+            Intent intent = null;
+            switch (v.getId()){
+                case R.id.btn_textview:
+                    //Jump tp Text
+                    intent = new Intent(MainActivity.this,TextViewActivity.class);
+                    break;
+                case R.id.btn_button:
+                    //Jump tp button
+                    intent = new Intent(MainActivity.this,ButtonActivity.class);
+                    break;
+                case R.id.btn_editText:
+                    //Jump tp EditText
+                    intent = new Intent(MainActivity.this,EditTextActivity.class);
+                    break;
+                case R.id.btn_radioButton:
+                    //Jump tp RadioButton
+                    intent = new Intent(MainActivity.this,RadioButtonActivity.class);
+                    break;
             }
-        });
+            startActivity(intent);
+        }
+
     }
 
 }

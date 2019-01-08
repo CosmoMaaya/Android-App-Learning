@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <RadioGroup
+        android:id="@+id/rg_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rb_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="愛美"
+            android:textSize="18sp"
+            android:checked="true"
+            android:textColor="#aa0099"/>
+
+        <RadioButton
+            android:id="@+id/rb_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="伊藤彩紗"
+            android:textSize="18sp"
+            android:textColor="#aa0099"/>
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/rg_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/rg_1">
+
+        <RadioButton
+            android:id="@+id/rb_3"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="愛美"
+            android:textSize="18sp"
+            android:checked="true"
+            android:button="@null"
+            android:background="@drawable/selector_orange"
+            android:textColor="#aa0099"/>
+
+        <RadioButton
+            android:id="@+id/rb_4"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="伊藤彩紗"
+            android:textSize="18sp"
+            android:button="@null"
+            android:background="@drawable/selector_orange"
+            android:layout_marginLeft="5dp"
+            android:textColor="#aa0099"/>
+    </RadioGroup>
+
+</RelativeLayout>

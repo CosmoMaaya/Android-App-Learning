@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnButton;
     private Button mBtnEditText;
     private Button mBtnRadionButton;
+    private Button mBtnCheckBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnButton = findViewById(R.id.btn_button);
         mBtnEditText = findViewById(R.id.btn_editText);
         mBtnRadionButton = findViewById(R.id.btn_radioButton);
+        mBtnCheckBox = findViewById(R.id.btn_checkBox);
         setListeners();
     }
 
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnTextView.setOnClickListener(onclick);
         mBtnButton.setOnClickListener(onclick);
         mBtnRadionButton.setOnClickListener(onclick);
+        mBtnCheckBox.setOnClickListener(onclick);
     }
 
     private class Onclick implements View.OnClickListener {
@@ -57,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_radioButton:
                     //Jump tp RadioButton
                     intent = new Intent(MainActivity.this,RadioButtonActivity.class);
+                    break;
+                case R.id.btn_checkBox:
+                    //Jump to checkbox demo
+                    intent = new Intent(MainActivity.this,CheckBoxActivity.class);
                     break;
             }
             startActivity(intent);

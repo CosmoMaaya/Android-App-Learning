@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="以下哪些是我老婆:"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:layout_marginBottom="15dp"/>
+
+    <CheckBox
+        android:id="@+id/cb_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="遠藤ゆりか"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="#AA0099"
+        android:layout_below="@id/tv_1"/>
+    <CheckBox
+        android:id="@+id/cb_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="工藤晴香"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="#AA0099"
+        android:layout_below="@id/cb_1"/>
+
+    <CheckBox
+        android:id="@+id/cb_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="岩田陽葵"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="#AA0099"
+        android:layout_below="@id/cb_2"/>
+
+    <CheckBox
+        android:id="@+id/cb_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dswlp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="#AA0099"
+        android:layout_below="@id/cb_3"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/cb_4"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Anyone else?"
+            android:textColor="#000"/>
+        <CheckBox
+            android:id="@+id/cb_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="内田真礼"
+            android:gravity="center"
+            android:button="@drawable/bg_checx_box"
+            android:paddingLeft="10dp"
+            android:textSize="18sp"
+            android:textColor="#AA0099"
+            android:layout_marginTop="15dp"/>
+        <CheckBox
+            android:id="@+id/cb_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="黒沢ともよ"
+            android:gravity="center"
+            android:button="@drawable/bg_checx_box"
+            android:paddingLeft="10dp"
+            android:textSize="18sp"
+            android:textColor="#AA0099"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
